@@ -15,11 +15,8 @@ public class ExplicitWait {
 		  WebDriverWait myWaitVar = new WebDriverWait(driver, 10);
 		  
 		  driver.get("http://demo.guru99.com/test/newtours/");
-		  myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
-		  //driver.findElement(By.id("username")).sendKeys("tutorial");
-		  //driver.findElement(By.cssSelector("input[name=\"userName\"]")).sendKeys("tutorial");
-		  //driver.findElement(By.name("userName")).sendKeys("tutorial");
-		  driver.findElement(By.cssSelector("input[name=\"userName\"]")).sendKeys("tutorial");
+		  myWaitVar.until(ExpectedConditions.visibilityOfElementLocated(By.name("userName")));
+		  driver.findElement(By.name("userName")).sendKeys("tutorial");
 	  }
 
 }
