@@ -1,9 +1,10 @@
 package newpackage;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.util.concurrent.TimeUnit;
+
 
 public class ImplicitWait {
 	
@@ -17,8 +18,7 @@ public class ImplicitWait {
 		  driver.get("http://jsbin.com/usidix/1");
 		  driver.findElement(By.cssSelector("input[value=\"Test!\"]")).click();
 		  
-		  driver.close(); 
-		  
+		  driver.close(); 	  
 		  
 	  }
 	  
