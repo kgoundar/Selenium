@@ -22,10 +22,21 @@ public class ConditionsTest {
 		  //WebElement txtbox_username = driver.findElement(By.name("userName"));
 		  WebElement txtbox_username = myWaitVar.until(ExpectedConditions.elementToBeClickable(By.name("userName")));
 		  
-		  if (txtbox_username.isEnabled()) {
+		  try {
 			  
-			  txtbox_username.sendKeys("turtorial");
+			  if (txtbox_username.isEnabled()) {
+				  
+				  txtbox_username.sendKeys("turtorial");
+			  }
+			 
+		  } 
+		  
+		  catch(NoSuchElementException nsee) {
+			  
+			  System.out.println(nsee.toString());
 		  }
+		  
+
 		  
 		  //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		  // txtbox_username.clear();
